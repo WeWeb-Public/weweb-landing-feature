@@ -240,14 +240,11 @@
 <style lang="scss" scoped>
 
     .section-container {
-        padding:16px;
+        padding:24px;
         margin: auto;
         color: var(--color-true-black);
-        @media (min-width: 560px) {
-            padding: 24px;
-        }
-        @media (min-width: 1025px) {
-            padding: 32px;
+        @media (min-width: 769px) {
+            padding: 64px;
         }
     }
 
