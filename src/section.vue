@@ -44,7 +44,7 @@
                             </svg>
                             <wwObject tag="span"
                                       :ww-object="feature.title"
-                                      ></wwObject>
+                            ></wwObject>
                         </div>
                         <wwLayoutColumn tag="div"
                                         ww-default="ww-text"
@@ -240,12 +240,14 @@
 <style lang="scss" scoped>
 
     .section-container {
-        padding: 8px;
+        padding:16px;
         margin: auto;
         color: var(--color-true-black);
-        @media (min-width: 1025px) {
-            max-width: 1440px;
+        @media (min-width: 560px) {
             padding: 24px;
+        }
+        @media (min-width: 1025px) {
+            padding: 32px;
         }
     }
 
@@ -266,6 +268,7 @@
 
     .left-content {
         position: relative;
+        padding: 0;
         width: 100%;
         list-style-type: none;
         @media (min-width: 1025px) {
@@ -333,7 +336,7 @@
         }
 
         &.selected {
-            max-height: 50px;
+            max-height: 100px;
             transition: max-height 250ms;
         }
     }
