@@ -36,14 +36,15 @@
                             <wwObject :ww-object="feature.logo"></wwObject>
                         </div>
                         <div class="feature-title"
-                             :class="{ selected: isFeatureSelected(feature,selectedFeature) }">
+                             :class="{ selected: isFeatureSelected(feature,selectedFeature) }"
+                             @click="toggleFeature(feature)">
                             <svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"
                                  class="toggle-icon">
                                 <path d="M1.41 0.589966L6 5.16997L10.59 0.589966L12 1.99997L6 7.99997L0 1.99997L1.41 0.589966Z"/>
                             </svg>
                             <wwObject tag="span"
                                       :ww-object="feature.title"
-                                      @click="toggleFeature(feature)"></wwObject>
+                                      ></wwObject>
                         </div>
                         <wwLayoutColumn tag="div"
                                         ww-default="ww-text"
@@ -296,6 +297,7 @@
             color: black;
             font-size: 18px;
             line-height: 1.2;
+            pointer-events: all;
 
             @media (min-width: 1025px) {
                 font-size: 24px;
