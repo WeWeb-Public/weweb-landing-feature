@@ -210,7 +210,7 @@
             addFeatureAt(index) {
                 const {features} = this.section.data
                 const head = features.slice(0, index)
-                const tail = index === 0 ? features : features.slice(index + 1)
+                const tail = index === 0 ? features : features.slice(index)
                 this.section.data.features = [...head, this.createFeature(), ...tail]
             },
             removeFeature(feature) {
