@@ -326,7 +326,8 @@
         overflow: hidden;
         font-size: 16px;
         line-height: 1.2;
-        transition: max-height 250ms;
+        opacity: 0;
+        transition: all 250ms;
 
         @media (min-width: 1025px) {
             font-size: 18px;
@@ -334,8 +335,9 @@
         }
 
         &.selected {
+            opacity: 1;
             max-height: 100px;
-            transition: max-height 250ms;
+            transition: all 250ms;
         }
     }
 
