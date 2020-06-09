@@ -298,6 +298,7 @@
             font-size: 18px;
             line-height: 1.2;
             pointer-events: all;
+            cursor: pointer;
 
             @media (min-width: 1025px) {
                 font-size: 24px;
