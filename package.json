@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/WeWeb-Public/weweb-landing-feature"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "build": "weweb-build",
@@ -14,10 +14,10 @@
     "create-config": "weweb-config"
   },
   "dependencies": {
-    "vue": "2.6.10"
+    "vue": "2.6.11"
   },
   "devDependencies": {
-    "weweb-client": "1.0.50"
+    "weweb-client": "latest"
   },
   "browserslist": [
     "> 1%",
