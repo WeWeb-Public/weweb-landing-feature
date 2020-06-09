@@ -1,12 +1,12 @@
 {
-  "name": "weweb-landing-features",
+  "name": "weweb_landing_features",
   "type": "section",
   "wewebPublic": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/WeWeb-Public/wwSection"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "weweb-build",
