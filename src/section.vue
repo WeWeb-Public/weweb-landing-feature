@@ -4,7 +4,7 @@
 
 <!-- This is your HTML -->
 <template>
-  <div>
+  <div class="weweb-landing-feature">
     <div class="section-container">
       <!-- wwManager:start -->
       <wwSectionEditMenu :sectionCtrl="sectionCtrl"></wwSectionEditMenu>
@@ -258,158 +258,161 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section-container {
-  padding: 0 5%;
-  margin: auto;
-  color: var(--color-true-black);
-  @media (min-width: 769px) {
-    padding: 0 10%;
-  }
-  @media (min-width: 992px) {
-    padding: 0 10%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-  @media (min-width: 1200px) {
-    padding: 0 15%;
-  }
-}
+.weweb-landing-feature {
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.left-content {
-  position: relative;
-  padding: 0;
-  width: 100%;
-  list-style-type: none;
-  @media (min-width: 1025px) {
-    width: 50%;
-  }
-}
-
-.feature {
-  &-wrapper {
-    position: relative;
-    margin-bottom: 24px;
-    @media (min-width: 1025px) {
-      margin-bottom: 48px;
+  .section-container {
+    padding: 0 5%;
+    margin: auto;
+    color: var(--color-true-black);
+    @media (min-width: 769px) {
+      padding: 0 10%;
+    }
+    @media (min-width: 992px) {
+      padding: 0 10%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 1200px) {
+      padding: 0 15%;
     }
   }
 
-  &-logo {
-    margin-left: 32px;
-    margin-bottom: 16px;
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 
-  &-title {
+  .content {
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-content: center;
-    align-items: center;
-    width: fit-content;
-    margin-bottom: 12px;
-    color: black;
-    font-size: 18px;
-    line-height: 1.2;
-    pointer-events: all;
-    cursor: pointer;
+    align-items: flex-start;
+  }
 
+  .left-content {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
     @media (min-width: 1025px) {
-      font-size: 24px;
-      line-height: 28px;
+      width: 50%;
+    }
+  }
+
+  .feature {
+    &-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      @media (min-width: 1025px) {
+        margin-bottom: 48px;
+      }
     }
 
-    &.selected {
-      color: var(--color-red);
+    &-logo {
+      margin-left: 32px;
+      margin-bottom: 16px;
+    }
 
-      .toggle-icon {
-        transform: rotateZ(-90deg);
-        transition: all 250ms;
+    &-title {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      width: fit-content;
+      margin-bottom: 12px;
+      color: black;
+      font-size: 18px;
+      line-height: 1.2;
+      pointer-events: all;
+      cursor: pointer;
 
-        path {
-          fill: var(--color-red);
+      @media (min-width: 1025px) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      &.selected {
+        color: var(--color-red);
+
+        .toggle-icon {
+          transform: rotateZ(-90deg);
+          transition: all 250ms;
+
+          path {
+            fill: var(--color-red);
+          }
         }
       }
     }
   }
-}
 
-.feature-content {
-  max-height: 0;
-  margin-left: 32px;
-  overflow: hidden;
-  font-size: 16px;
-  line-height: 1.2;
-  opacity: 0;
-  transition: all 250ms;
-
-  @media (min-width: 1025px) {
-    font-size: 18px;
-    line-height: 21px;
-  }
-
-  &.selected {
-    opacity: 1;
-    max-height: 100px;
-    transition: all 250ms;
-  }
-}
-
-.right-wrapper {
-  display: none;
-  padding-left: 15px;
-  @media (min-width: 1025px) {
-    display: block;
-    width: 50%;
-    position: relative;
-  }
-}
-
-.feature-display {
-  &-wrapper {
-    position: relative;
-    width: 496px;
-    height: 640px;
+  .feature-content {
+    max-height: 0;
+    margin-left: 32px;
     overflow: hidden;
-    margin: auto;
-  }
-
-  &-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
     opacity: 0;
+    transition: all 250ms;
 
-    &.active {
+    @media (min-width: 1025px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    &.selected {
       opacity: 1;
-      z-index: 2;
+      max-height: 100px;
+      transition: all 250ms;
     }
   }
-}
 
-.toggle-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 16px;
+  .right-wrapper {
+    display: none;
+    padding-left: 15px;
+    @media (min-width: 1025px) {
+      display: block;
+      width: 50%;
+      position: relative;
+    }
+  }
 
-  path {
-    fill: var(--color-true-black);
+  .feature-display {
+    &-wrapper {
+      position: relative;
+      width: 496px;
+      height: 640px;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    &-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+
+  .toggle-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+
+    path {
+      fill: var(--color-true-black);
+    }
   }
 }
 </style>
